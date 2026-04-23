@@ -6,20 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		57C5C3892F9A8F2700ACF20E /* GrimeSlime-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C3882F9A8F2700ACF20E /* GrimeSlime-Regular.ttf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		57C5C3552F9A7C1300ACF20E /* JogodasPerguntas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogodasPerguntas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C5C37A2F9A8EA800ACF20E /* JogodasPerguntas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogodasPerguntas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C5C3882F9A8F2700ACF20E /* GrimeSlime-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GrimeSlime-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		57C5C38B2F9A8F3800ACF20E /* Exceptions for "JogodasPerguntas" folder in "JogodasPerguntas" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 57C5C3792F9A8EA800ACF20E /* JogodasPerguntas */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		57C5C3572F9A7C1300ACF20E /* JogodasPerguntas */ = {
+		57C5C37C2F9A8EA800ACF20E /* JogodasPerguntas */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				57C5C38B2F9A8F3800ACF20E /* Exceptions for "JogodasPerguntas" folder in "JogodasPerguntas" target */,
+			);
 			path = JogodasPerguntas;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		57C5C3522F9A7C1300ACF20E /* Frameworks */ = {
+		57C5C3772F9A8EA800ACF20E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57C5C34C2F9A7C1300ACF20E = {
+		57C5C3712F9A8EA800ACF20E = {
 			isa = PBXGroup;
 			children = (
-				57C5C3572F9A7C1300ACF20E /* JogodasPerguntas */,
-				57C5C3562F9A7C1300ACF20E /* Products */,
+				57C5C3882F9A8F2700ACF20E /* GrimeSlime-Regular.ttf */,
+				57C5C37C2F9A8EA800ACF20E /* JogodasPerguntas */,
+				57C5C37B2F9A8EA800ACF20E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		57C5C3562F9A7C1300ACF20E /* Products */ = {
+		57C5C37B2F9A8EA800ACF20E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57C5C3552F9A7C1300ACF20E /* JogodasPerguntas.app */,
+				57C5C37A2F9A8EA800ACF20E /* JogodasPerguntas.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,74 +67,75 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57C5C3542F9A7C1300ACF20E /* JogodasPerguntas */ = {
+		57C5C3792F9A8EA800ACF20E /* JogodasPerguntas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57C5C3602F9A7C1400ACF20E /* Build configuration list for PBXNativeTarget "JogodasPerguntas" */;
+			buildConfigurationList = 57C5C3852F9A8EA900ACF20E /* Build configuration list for PBXNativeTarget "JogodasPerguntas" */;
 			buildPhases = (
-				57C5C3512F9A7C1300ACF20E /* Sources */,
-				57C5C3522F9A7C1300ACF20E /* Frameworks */,
-				57C5C3532F9A7C1300ACF20E /* Resources */,
+				57C5C3762F9A8EA800ACF20E /* Sources */,
+				57C5C3772F9A8EA800ACF20E /* Frameworks */,
+				57C5C3782F9A8EA800ACF20E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				57C5C3572F9A7C1300ACF20E /* JogodasPerguntas */,
+				57C5C37C2F9A8EA800ACF20E /* JogodasPerguntas */,
 			);
 			name = JogodasPerguntas;
 			packageProductDependencies = (
 			);
 			productName = JogodasPerguntas;
-			productReference = 57C5C3552F9A7C1300ACF20E /* JogodasPerguntas.app */;
+			productReference = 57C5C37A2F9A8EA800ACF20E /* JogodasPerguntas.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		57C5C34D2F9A7C1300ACF20E /* Project object */ = {
+		57C5C3722F9A8EA800ACF20E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					57C5C3542F9A7C1300ACF20E = {
+					57C5C3792F9A8EA800ACF20E = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
 			};
-			buildConfigurationList = 57C5C3502F9A7C1300ACF20E /* Build configuration list for PBXProject "JogodasPerguntas" */;
+			buildConfigurationList = 57C5C3752F9A8EA800ACF20E /* Build configuration list for PBXProject "JogodasPerguntas" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 57C5C34C2F9A7C1300ACF20E;
+			mainGroup = 57C5C3712F9A8EA800ACF20E;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 57C5C3562F9A7C1300ACF20E /* Products */;
+			productRefGroup = 57C5C37B2F9A8EA800ACF20E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57C5C3542F9A7C1300ACF20E /* JogodasPerguntas */,
+				57C5C3792F9A8EA800ACF20E /* JogodasPerguntas */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57C5C3532F9A7C1300ACF20E /* Resources */ = {
+		57C5C3782F9A8EA800ACF20E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C5C3892F9A8F2700ACF20E /* GrimeSlime-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		57C5C3512F9A7C1300ACF20E /* Sources */ = {
+		57C5C3762F9A8EA800ACF20E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +145,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		57C5C35E2F9A7C1400ACF20E /* Debug */ = {
+		57C5C3832F9A8EA900ACF20E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		57C5C35F2F9A7C1400ACF20E /* Release */ = {
+		57C5C3842F9A8EA900ACF20E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,7 +264,7 @@
 			};
 			name = Release;
 		};
-		57C5C3612F9A7C1400ACF20E /* Debug */ = {
+		57C5C3862F9A8EA900ACF20E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -253,6 +273,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JogodasPerguntas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -275,7 +296,7 @@
 			};
 			name = Debug;
 		};
-		57C5C3622F9A7C1400ACF20E /* Release */ = {
+		57C5C3872F9A8EA900ACF20E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -284,6 +305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JogodasPerguntas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,25 +331,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57C5C3502F9A7C1300ACF20E /* Build configuration list for PBXProject "JogodasPerguntas" */ = {
+		57C5C3752F9A8EA800ACF20E /* Build configuration list for PBXProject "JogodasPerguntas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57C5C35E2F9A7C1400ACF20E /* Debug */,
-				57C5C35F2F9A7C1400ACF20E /* Release */,
+				57C5C3832F9A8EA900ACF20E /* Debug */,
+				57C5C3842F9A8EA900ACF20E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57C5C3602F9A7C1400ACF20E /* Build configuration list for PBXNativeTarget "JogodasPerguntas" */ = {
+		57C5C3852F9A8EA900ACF20E /* Build configuration list for PBXNativeTarget "JogodasPerguntas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57C5C3612F9A7C1400ACF20E /* Debug */,
-				57C5C3622F9A7C1400ACF20E /* Release */,
+				57C5C3862F9A8EA900ACF20E /* Debug */,
+				57C5C3872F9A8EA900ACF20E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 57C5C34D2F9A7C1300ACF20E /* Project object */;
+	rootObject = 57C5C3722F9A8EA800ACF20E /* Project object */;
 }
