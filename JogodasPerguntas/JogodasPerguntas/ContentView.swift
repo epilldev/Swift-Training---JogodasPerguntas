@@ -54,6 +54,9 @@ struct ContentView: View {
                     .padding(.horizontal)
                     .frame(maxWidth: .infinity)
                     
+                    Text("© Felipe Joaquim")
+                        .font(.caption2)
+                        .foregroundColor(.gray)
                 }
                 .padding(.horizontal)
                 .padding(.top, 60)
