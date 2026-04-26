@@ -1,0 +1,216 @@
+[
+  {
+    "pergunta": "Qual desses dispositivos usamos para acessar a internet no dia a dia?",
+    "alternativas": ["Geladeira", "Smartphone", "Micro-ondas", "Liquidificador"],
+    "respostaCorreta": 1,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "O que significa a sigla Wi-Fi?",
+    "alternativas": ["Wireless Fidelity", "Web File Input", "Wide Fast Internet", "Wireless File Integration"],
+    "respostaCorreta": 0,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "Para que serve um navegador de internet (como Chrome ou Safari)?",
+    "alternativas": ["Editar vídeos", "Acessar sites", "Criar jogos", "Instalar aplicativos"],
+    "respostaCorreta": 1,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "Qual desses é um sistema operacional de celular?",
+    "alternativas": ["Android", "Photoshop", "Excel", "Chrome"],
+    "respostaCorreta": 0,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "O que é um aplicativo (app)?",
+    "alternativas": ["Um tipo de hardware", "Um programa para executar tarefas", "Um tipo de internet", "Um tipo de arquivo de imagem"],
+    "respostaCorreta": 1,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "Qual empresa criou o iPhone?",
+    "alternativas": ["Samsung", "Google", "Apple", "Microsoft"],
+    "respostaCorreta": 2,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "Qual rede social é focada em vídeos curtos?",
+    "alternativas": ["LinkedIn", "TikTok", "WhatsApp", "Gmail"],
+    "respostaCorreta": 1,
+    "tema": "Tecnologia"
+  },
+  {
+    "pergunta": "Qual desses dispositivos usamos para armazenar arquivos?",
+    "alternativas": ["HD", "Mouse", "Teclado", "Monitor"],
+    "respostaCorreta": 0,
+    "tema": "Tecnologia"
+  },
+
+  {
+    "pergunta": "Quem foi o campeão da Copa do Mundo de 2002?",
+    "alternativas": ["Alemanha", "Brasil", "França", "Argentina"],
+    "respostaCorreta": 1,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "Quantos jogadores cada time tem em campo no futebol?",
+    "alternativas": ["9", "10", "11", "12"],
+    "respostaCorreta": 2,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "Qual desses jogadores é brasileiro?",
+    "alternativas": ["Messi", "Cristiano Ronaldo", "Neymar", "Mbappé"],
+    "respostaCorreta": 2,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "Quantas Copas do Mundo o Brasil já venceu?",
+    "alternativas": ["3", "4", "5", "6"],
+    "respostaCorreta": 2,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "Qual é o principal objetivo do futebol?",
+    "alternativas": ["Fazer pontos", "Marcar gols", "Evitar faltas", "Controlar o tempo"],
+    "respostaCorreta": 1,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "Qual desses campeonatos é brasileiro?",
+    "alternativas": ["La Liga", "Premier League", "Brasileirão", "Serie A italiana"],
+    "respostaCorreta": 2,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "Qual desses jogadores já jogou pela seleção brasileira?",
+    "alternativas": ["Mbappé", "Haaland", "Ronaldinho Gaúcho", "Modric"],
+    "respostaCorreta": 2,
+    "tema": "Futebol"
+  },
+  {
+    "pergunta": "O que acontece quando um jogador recebe cartão vermelho?",
+    "alternativas": ["Sai do jogo", "Ganha ponto", "Volta depois", "Nada acontece"],
+    "respostaCorreta": 0,
+    "tema": "Futebol"
+  },
+
+  {
+    "pergunta": "Quem foi o primeiro presidente do Brasil?",
+    "alternativas": ["Getúlio Vargas", "Deodoro da Fonseca", "Dom Pedro I", "Lula"],
+    "respostaCorreta": 1,
+    "tema": "História"
+  },
+  {
+    "pergunta": "Em que ano o Brasil foi descoberto?",
+    "alternativas": ["1492", "1500", "1822", "1889"],
+    "respostaCorreta": 1,
+    "tema": "História"
+  },
+  {
+    "pergunta": "O que aconteceu em 1822 no Brasil?",
+    "alternativas": ["Descobrimento", "Independência", "Proclamação da República", "Abolição da escravidão"],
+    "respostaCorreta": 1,
+    "tema": "História"
+  },
+  {
+    "pergunta": "Quem proclamou a independência do Brasil?",
+    "alternativas": ["Dom Pedro I", "Dom Pedro II", "Getúlio Vargas", "Tiradentes"],
+    "respostaCorreta": 0,
+    "tema": "História"
+  },
+  {
+    "pergunta": "Qual evento marcou o fim da escravidão no Brasil?",
+    "alternativas": ["Independência", "Lei Áurea", "Proclamação da República", "Constituição"],
+    "respostaCorreta": 1,
+    "tema": "História"
+  },
+  {
+    "pergunta": "Quem foi Tiradentes?",
+    "alternativas": ["Imperador", "Militar da República", "Líder da Inconfidência Mineira", "Presidente"],
+    "respostaCorreta": 2,
+    "tema": "História"
+  },
+  {
+    "pergunta": "Qual país colonizou o Brasil?",
+    "alternativas": ["Espanha", "Portugal", "França", "Inglaterra"],
+    "respostaCorreta": 1,
+    "tema": "História"
+  },
+
+  {
+    "pergunta": "Qual é o planeta em que vivemos?",
+    "alternativas": ["Marte", "Terra", "Júpiter", "Saturno"],
+    "respostaCorreta": 1,
+    "tema": "Ciência"
+  },
+  {
+    "pergunta": "O que precisamos para respirar?",
+    "alternativas": ["Gás carbônico", "Oxigênio", "Hidrogênio", "Nitrogênio puro"],
+    "respostaCorreta": 1,
+    "tema": "Ciência"
+  },
+  {
+    "pergunta": "O que acontece quando a água ferve?",
+    "alternativas": ["Congela", "Evapora", "Vira gelo", "Desaparece"],
+    "respostaCorreta": 1,
+    "tema": "Ciência"
+  },
+  {
+    "pergunta": "Qual é o maior órgão do corpo humano?",
+    "alternativas": ["Coração", "Pulmão", "Pele", "Fígado"],
+    "respostaCorreta": 2,
+    "tema": "Ciência"
+  },
+  {
+    "pergunta": "O que o Sol é?",
+    "alternativas": ["Planeta", "Estrela", "Satélite", "Cometa"],
+    "respostaCorreta": 1,
+    "tema": "Ciência"
+  },
+  {
+    "pergunta": "Qual desses é um estado da matéria?",
+    "alternativas": ["Fogo", "Energia", "Sólido", "Calor"],
+    "respostaCorreta": 2,
+    "tema": "Ciência"
+  },
+
+  {
+    "pergunta": "Qual é o maior país do mundo em território?",
+    "alternativas": ["Brasil", "Estados Unidos", "China", "Rússia"],
+    "respostaCorreta": 3,
+    "tema": "Geografia"
+  },
+  {
+    "pergunta": "Em qual continente fica o Brasil?",
+    "alternativas": ["Europa", "África", "América", "Ásia"],
+    "respostaCorreta": 2,
+    "tema": "Geografia"
+  },
+  {
+    "pergunta": "Qual é o oceano mais extenso do planeta?",
+    "alternativas": ["Atlântico", "Índico", "Pacífico", "Ártico"],
+    "respostaCorreta": 2,
+    "tema": "Geografia"
+  },
+  {
+    "pergunta": "Qual é a capital do Brasil?",
+    "alternativas": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+    "respostaCorreta": 2,
+    "tema": "Geografia"
+  },
+  {
+    "pergunta": "Qual é o maior estado do Brasil em território?",
+    "alternativas": ["São Paulo", "Minas Gerais", "Amazonas", "Bahia"],
+    "respostaCorreta": 2,
+    "tema": "Geografia"
+  },
+  {
+    "pergunta": "Qual desses países fica na América do Sul?",
+    "alternativas": ["Espanha", "Chile", "Alemanha", "Japão"],
+    "respostaCorreta": 1,
+    "tema": "Geografia"
+  }
+]

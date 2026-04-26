@@ -4,6 +4,8 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack {
+            
+            //gradiente leve do branco ao gelo
             ZStack {
                 LinearGradient(
                     colors: [
@@ -25,7 +27,7 @@ struct ContentView: View {
                             .foregroundColor(.black)
                             .shadow(color: .black.opacity(0.4), radius: 6, x: 0, y: 3)
                         
-                        Text("Teste seus conhecimentos e evolua a cada pergunta.")
+                        Text("Escolha seu tema preferido e teste seus conhecimentos. Evolua a cada pergunta.")
                             .font(.custom("GRIME SLIME", size: 15))
                             .foregroundColor(.black.opacity(0.95))
                             .multilineTextAlignment(.center)
@@ -40,27 +42,16 @@ struct ContentView: View {
                     Spacer()
                     
                     // BOTÃO
-                    VStack(spacing: 12) {
-                        
-                        Text("Clique abaixo para iniciar")
-                            .font(.custom("GRIME SLIME", size: 20))
-                            .foregroundColor(.black.opacity(0.9))
-                            .multilineTextAlignment(.center)
-                        
-                        //para ir para a proxima tela na hora do play
-                        NavigationLink(destination: QuizEstrutura()) {
-                            Image(systemName: "play.fill")
-                                .font(.system(size: 24, weight: .bold))
-                                .foregroundColor(.black)
-                                .frame(width: 70, height: 70)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color.black.opacity(0.1), lineWidth: 1)
-                                )
-                        }
+                    NavigationLink(destination: Temas()) {
+                        Text("INICIAR O JOGO")
+                            .font(.custom("GRIME SLIME", size: 18))
+                            .foregroundColor(.white)
+                            .frame(width: 200)
+                            .padding()
+                            .background(Color.black)
+                            .cornerRadius(14)
                     }
+                    .padding(.horizontal)
                     .frame(maxWidth: .infinity)
                     
                 }

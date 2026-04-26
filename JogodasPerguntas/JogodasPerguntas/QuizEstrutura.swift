@@ -2,111 +2,187 @@ import SwiftUI
 
 struct QuizEstrutura: View {
     
-    struct Question {
-        let pergunta: String
-        let alternativas: [String]
-        let respostaCorreta: Int
-    }
     
-    
-    //vetorzinho com as perguntas
-    let perguntas: [Question] = [
-        Question(
-            pergunta: "Swift é usado para qual plataforma?",
-            alternativas: ["Android", "iOS", "Web", "Windows"],
-            respostaCorreta: 1
-        ),
-        Question(
-            pergunta: "Qual empresa criou o Swift?",
-            alternativas: ["Google", "Apple", "Microsoft", "Amazon"],
-            respostaCorreta: 1
-        )
-    ]
+    @State private var acertos = 0
+    @State private var irResultado = false
+    @State private var resetarFluxo = false
     
     @State private var perguntaAtual = 0
     @State private var respostaSelecionada: Int? = nil
     
+    @State private var respondeu = false
+    
+    // Temas escolhidos na tela anterior
+    let temasSelecionados: Set<String>
+    
+    
+    struct Question: Codable {
+        let pergunta: String
+        let alternativas: [String]
+        let respostaCorreta: Int
+        let tema: String
+    }
+    
+    
+    let perguntas: [Question] = carregarPerguntas()
+    
+    var perguntasFiltradas: [Question] {
+        temasSelecionados.isEmpty
+        ? perguntas
+        : perguntas.filter { temasSelecionados.contains($0.tema) }
+    }
+    
     var body: some View {
         
         ZStack {
-            // FUNDO PADRÃO IOS
             Color(.systemGroupedBackground)
                 .ignoresSafeArea()
             
-            VStack(spacing: 24) {
+            if perguntasFiltradas.isEmpty {
                 
-                // CONTADOR
-                Text("\(perguntaAtual + 1) de \(perguntas.count)")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(.secondary)
+                VStack(spacing: 16) {
+                    Text("Nenhuma pergunta disponível")
+                        .font(.headline)
+                    
+                    Text("Selecione um tema válido")
+                        .foregroundColor(.secondary)
+                }
                 
-                // PERGUNTA (CARD)
-                Text(perguntas[perguntaAtual].pergunta)
-                    .font(.system(size: 20, weight: .semibold))
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.white)
-                    .cornerRadius(16)
-                    .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
+            } else {
                 
-                // ALTERNATIVAS
-                VStack(spacing: 12) {
-                    ForEach(0..<perguntas[perguntaAtual].alternativas.count, id: \.self) { index in
-                        
-                        Button(action: {
-                            respostaSelecionada = index
-                        }) {
-                            HStack {
-                                Text(perguntas[perguntaAtual].alternativas[index])
-                                    .foregroundColor(.primary)
+                VStack(spacing: 24) {
+                    
+                    // CONTADOR
+                    Text("\(perguntaAtual + 1) de \(perguntasFiltradas.count)")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(.secondary)
+                    
+                    // PERGUNTA
+                    Text(perguntasFiltradas[perguntaAtual].pergunta)
+                        .font(.system(size: 20, weight: .semibold))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .cornerRadius(16)
+                        .shadow(color: .black.opacity(0.05), radius: 8)
+                    
+                    // ALTERNATIVAS
+                    VStack(spacing: 12) {
+                        ForEach(0..<perguntasFiltradas[perguntaAtual].alternativas.count, id: \.self) { index in
+                            
+                            Button {
+                                respostaSelecionada = index
                                 
-                                Spacer()
+                                respondeu = true
+                                
+                            } label: {
+                                HStack {
+                                    Text(perguntasFiltradas[perguntaAtual].alternativas[index])
+                                    Spacer()
+                                }
+                                .padding()
+                                .background(corResposta(index: index))
+                                .cornerRadius(14)
+                                .shadow(color: .black.opacity(0.03), radius: 4)
                             }
-                            .padding()
-                            .background(
-                                respostaSelecionada == index
-                                ? Color.black.opacity(0.08)
-                                : Color.white
-                            )
-                            .cornerRadius(14)
-                            .shadow(color: .black.opacity(0.03), radius: 4, x: 0, y: 2)
+                            .disabled(respondeu)
                         }
                     }
+                    
+                    Spacer()
+                    
+                    // BOTÃO PRÓXIMA
+                    Button(action: proximaPergunta) {
+                        Text("Próxima")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(
+                                // botão só ativa depois que respondeu
+                                respondeu
+                                ? Color.black
+                                : Color.gray.opacity(0.3)
+                            )
+                            .foregroundColor(.white)
+                            .cornerRadius(14)
+                    }
+                    .disabled(!respondeu)
                 }
-                
-                Spacer()
-                
-                // BOTÃO PRÓXIMA
-                Button(action: proximaPergunta) {
-                    Text("Próxima")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(
-                            respostaSelecionada == nil
-                            ? Color.gray.opacity(0.3)
-                            : Color.black
-                        )
-                        .foregroundColor(.white)
-                        .cornerRadius(14)
-                }
-                .disabled(respostaSelecionada == nil)
-                
+                .padding()
             }
-            .padding()
+        }
+        
+        .navigationDestination(isPresented: $irResultado) {
+            Resultado(
+                acertos: acertos,
+                total: perguntasFiltradas.count,
+                encerrar: {
+                    resetarFluxo = true
+                }
+            )
+        }
+        
+        .navigationDestination(isPresented: $resetarFluxo) {
+            Temas()
         }
     }
     
-    // LÓGICA DE AVANÇO
-    func proximaPergunta() {
-        if perguntaAtual < perguntas.count - 1 {
-            perguntaAtual += 1
-            respostaSelecionada = nil
+    func corResposta(index: Int) -> Color {
+        if !respondeu {
+            return respostaSelecionada == index
+            ? Color.black.opacity(0.08)
+            : Color.white
         }
+        
+        // depois de responder
+        if index == respostaSelecionada {
+            let pergunta = perguntasFiltradas[perguntaAtual]
+            
+            if index == pergunta.respostaCorreta {
+                return Color.green.opacity(0.3) // acertou
+            } else {
+                return Color.red.opacity(0.3) // errou
+            }
+        }
+        
+        return Color.white
+    }
+    
+    func proximaPergunta() {
+        let pergunta = perguntasFiltradas[perguntaAtual]
+        
+        // valida acerto
+        if respostaSelecionada == pergunta.respostaCorreta {
+            acertos += 1
+        }
+        
+        // avança ou finaliza
+        if perguntaAtual < perguntasFiltradas.count - 1 {
+            perguntaAtual += 1
+            
+            // reset de estado para próxima pergunta
+            respostaSelecionada = nil
+            respondeu = false
+            
+        } else {
+            irResultado = true
+        }
+    }
+    
+    static func carregarPerguntas() -> [Question] {
+        guard let url = Bundle.main.url(forResource: "perguntas", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let perguntas = try? JSONDecoder().decode([Question].self, from: data)
+        else {
+            print("Erro ao carregar perguntas")
+            return []
+        }
+        
+        return perguntas
     }
 }
 
 #Preview {
-    QuizEstrutura()
+    QuizEstrutura(temasSelecionados: [])
 }

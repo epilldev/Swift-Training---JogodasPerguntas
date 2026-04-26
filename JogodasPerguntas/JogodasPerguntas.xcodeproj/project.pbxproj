@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		57C5C3892F9A8F2700ACF20E /* GrimeSlime-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C3882F9A8F2700ACF20E /* GrimeSlime-Regular.ttf */; };
+		57C5C39B2F9E687800ACF20E /* perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = 57C5C39A2F9E686B00ACF20E /* perguntas.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57C5C37A2F9A8EA800ACF20E /* JogodasPerguntas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogodasPerguntas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5C3882F9A8F2700ACF20E /* GrimeSlime-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GrimeSlime-Regular.ttf"; sourceTree = "<group>"; };
+		57C5C39A2F9E686B00ACF20E /* perguntas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = perguntas.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,6 +52,7 @@
 		57C5C3712F9A8EA800ACF20E = {
 			isa = PBXGroup;
 			children = (
+				57C5C39A2F9E686B00ACF20E /* perguntas.json */,
 				57C5C3882F9A8F2700ACF20E /* GrimeSlime-Regular.ttf */,
 				57C5C37C2F9A8EA800ACF20E /* JogodasPerguntas */,
 				57C5C37B2F9A8EA800ACF20E /* Products */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C5C39B2F9E687800ACF20E /* perguntas.json in Resources */,
 				57C5C3892F9A8F2700ACF20E /* GrimeSlime-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +275,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FPB4V88ZY9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JogodasPerguntas/Info.plist;
@@ -303,6 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FPB4V88ZY9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JogodasPerguntas/Info.plist;
